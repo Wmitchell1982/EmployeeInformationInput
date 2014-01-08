@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sstInfo = new System.Windows.Forms.StatusStrip();
+            this.sslblInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblEmployeeId = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblDepartment = new System.Windows.Forms.Label();
@@ -50,7 +51,10 @@
             this.tbCurrentStudents = new System.Windows.Forms.TextBox();
             this.tbPotentialStudents = new System.Windows.Forms.TextBox();
             this.tbProgramApprovals = new System.Windows.Forms.TextBox();
-            this.statusStrip1.SuspendLayout();
+            this.errInfo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ttInfo = new System.Windows.Forms.ToolTip(this.components);
+            this.sstInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -93,21 +97,20 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // statusStrip1
+            // sstInfo
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 367);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(271, 22);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
+            this.sstInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sslblInfo});
+            this.sstInfo.Location = new System.Drawing.Point(0, 367);
+            this.sstInfo.Name = "sstInfo";
+            this.sstInfo.Size = new System.Drawing.Size(271, 22);
+            this.sstInfo.TabIndex = 4;
+            this.sstInfo.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // sslblInfo
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.sslblInfo.Name = "sslblInfo";
+            this.sslblInfo.Size = new System.Drawing.Size(0, 17);
             // 
             // lblEmployeeId
             // 
@@ -237,6 +240,15 @@
             this.tbProgramApprovals.Size = new System.Drawing.Size(100, 20);
             this.tbProgramApprovals.TabIndex = 7;
             // 
+            // errInfo
+            // 
+            this.errInfo.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errInfo.ContainerControl = this;
+            // 
+            // ttInfo
+            // 
+            this.ttInfo.IsBalloon = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,7 +270,7 @@
             this.Controls.Add(this.lblDepartment);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblEmployeeId);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.sstInfo);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.btnReset);
@@ -266,8 +278,9 @@
             this.Name = "frmMain";
             this.Text = "Enter Employee Data";
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.sstInfo.ResumeLayout(false);
+            this.sstInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,8 +292,8 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.StatusStrip sstInfo;
+        private System.Windows.Forms.ToolStripStatusLabel sslblInfo;
         private System.Windows.Forms.Label lblEmployeeId;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label lblDepartment;
@@ -297,6 +310,8 @@
         private System.Windows.Forms.TextBox tbCurrentStudents;
         private System.Windows.Forms.TextBox tbPotentialStudents;
         private System.Windows.Forms.TextBox tbProgramApprovals;
+        private System.Windows.Forms.ErrorProvider errInfo;
+        private System.Windows.Forms.ToolTip ttInfo;
     }
 }
 
