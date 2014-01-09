@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace EmployeeInformationInputProgram
         private int _potentialStudents;
         private int _programAuthorizations;
 
+
         public int currentStudents
         {
             get { return _currentStudents; }
@@ -38,5 +40,12 @@ namespace EmployeeInformationInputProgram
             get { return _programAuthorizations; }
             set { _programAuthorizations = value; }
         }
+
+        public void createAdvisor(DataTable table)
+        {
+            table.Rows.Add(employeeId, firstName, lastName, department, salary,
+                       currentStudents, potentialStudents, programAuthorizations);
+        }
     }
+
 }
