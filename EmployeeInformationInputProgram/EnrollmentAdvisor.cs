@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 /********************************************************
- * Program: Employee Information Input Program Ver 1.0  *
+ * Program: Employee Information Input Program Ver 1.1  *
  * Programmer: William Mitchell                         *
  * Date of last update: 01/08/2014                      *
  * Course: POS/409                                      *
@@ -23,13 +23,13 @@ namespace EmployeeInformationInputProgram
         private int _programAuthorizations;
 
 
-        public int currentStudents
+        public int currentStudents 
         {
             get { return _currentStudents; }
             set { _currentStudents = value; }
         }
 
-        public int potentialStudents
+        public int potentialStudents 
         {
             get { return _potentialStudents; }
             set { _potentialStudents = value; }
@@ -41,7 +41,7 @@ namespace EmployeeInformationInputProgram
             set { _programAuthorizations = value; }
         }
 
-        public void createAdvisor(DataTable table)
+        public void createAdvisor(DataTable table) 
         {
             table.Rows.Add(employeeId, firstName, lastName, department, salary,
                        currentStudents, potentialStudents, programAuthorizations);

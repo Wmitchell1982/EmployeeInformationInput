@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 /********************************************************
- * Program: Employee Information Input Program Ver 1.0  *
+ * Program: Employee Information Input Program Ver 1.1  *
  * Programmer: William Mitchell                         *
  * Date of last update: 01/08/2014                      *
  * Course: POS/409                                      *
