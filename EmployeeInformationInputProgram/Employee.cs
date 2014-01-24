@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 /********************************************************
- * Program: Employee Information Input Program Ver 1.1  *
+ * Program: Employee Information Input Program Ver 2.0  *
  * Programmer: William Mitchell                         *
- * Date of last update: 01/08/2014                      *
+ * Date of last update: 01/23/2014                      *
  * Course: POS/409                                      *
  * Instructor: Dr. Brad Purdy                           *
  ********************************************************/
